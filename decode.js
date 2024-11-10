@@ -21,7 +21,15 @@ document.getElementById('decodeForm').addEventListener('submit', function(event)
     const hexKey = base64ToHex(base64Key);
     const hexKid = base64ToHex(base64Kid);
 
-    // Display the decoded results
+    // Display the decoded results with a fade-in effect
     document.getElementById('hexKey').textContent = hexKey;
     document.getElementById('hexKid').textContent = hexKid;
+
+    // Add a fade-in effect to the results
+    const resultContainer = document.querySelector('.result-container');
+    resultContainer.style.opacity = 0;
+    setTimeout(function() {
+        resultContainer.style.transition = 'opacity 1s';
+        resultContainer.style.opacity = 1;
+    }, 100);
 });
