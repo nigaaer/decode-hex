@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Base64 Decoder</title>
+</head>
+<body>
+    <h1>Base64 Decoder</h1>
+    <form id="decodeForm">
+        <label for="key">Enter Base64 Encoded Key:</label><br>
+        <input type="text" id="key" name="key" required><br><br>
+        <label for="kid">Enter Base64 Encoded KeyID:</label><br>
+        <input type="text" id="kid" name="kid" required><br><br>
+        <input type="submit" value="Decode">
+    </form>
+    <h2>Decoded Results</h2>
+    <p><strong>Key (Hex):</strong> <span id="hexKey"></span></p>
+    <p><strong>KeyID (Hex):</strong> <span id="hexKid"></span></p>
+
+    <script src="decode.js"></script>
+</body>
+</html>
